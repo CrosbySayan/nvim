@@ -26,6 +26,7 @@ return {
         severity_sort = true,
         underline = { severity = vim.diagnostic.severity.ERROR },
         float = {
+          border = "rounded",
           source = "always", -- Or "if_many"
         },
       })

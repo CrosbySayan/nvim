@@ -42,7 +42,6 @@ return {
 
     keymap.set("n", "<leader>ft", require('telescope.builtin').diagnostics, { desc = "Search man pages" })
     keymap.set("n", "<leader>fm", require('telescope.builtin').man_pages, { desc = "Search man pages" })
-
     -- TODO:
     -- Man Page Support
     -- Error Call

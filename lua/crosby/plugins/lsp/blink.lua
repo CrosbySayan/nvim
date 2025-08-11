@@ -63,7 +63,8 @@ return {
         }
       },
       keyword = { range = 'full' },
-      documentation = { auto_show = false }
+      documentation = { auto_show = false },
+      accept = { auto_brackets = { enabled = true } }
     },
 
     -- Default list of enabled providers defined so that you can extend it
