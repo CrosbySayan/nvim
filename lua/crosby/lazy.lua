@@ -16,6 +16,9 @@ require("lazy").setup({ { import = "crosby.plugins" }, { import = "crosby.plugin
     enabled = true,
     notify = false,
   },
+  ui = {
+    border = "rounded",
+  },
   change_detection = {
     notify = false,
   },

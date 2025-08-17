@@ -9,10 +9,12 @@ return {
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
-
     -- Setup telescope with extensions
     telescope.setup({
       defaults = {
+        layout_config = {
+          preview_cutoff = 0,
+        },
         -- Add any default configurations here
         path_display = { "smart" },
         mappings = {
