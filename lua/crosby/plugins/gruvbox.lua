@@ -1,40 +1,36 @@
 return {
-  -- Gruvbox theme
+  -- Gruvbox Material theme (better LSP support)
   {
-    "ellisonleao/gruvbox.nvim",
+    "sainnhe/gruvbox-material",
     priority = 1000,
     lazy = false,
     config = function()
-      require("gruvbox").setup({
-        terminal_colors = true, -- add neovim terminal colors
-        undercurl = true,
-        underline = true,
-        bold = true,
-        italic = {
-          strings = true,
-          emphasis = true,
-          comments = true,
-          operators = false,
-          folds = true,
-        },
-        strikethrough = true,
-        invert_selection = false,
-        invert_signs = false,
-        invert_tabline = false,
-        invert_intend_guides = false,
-        inverse = true, -- invert background for search, diffs, statuslines and errors
-        contrast = "",  -- can be "hard", "soft" or empty string
-        palette_overrides = {},
-        overrides = {},
-        dim_inactive = false,
-        transparent_mode = true,
-      })
+      -- Configure gruvbox-material settings
+      vim.g.gruvbox_material_foreground = "mix" -- "material", "mix", "original"
+      vim.g.gruvbox_material_style = "hard"     -- "hard", "medium", "soft"
+      vim.g.gruvbox_material_background = "dark"
+      vim.g.gruvbox_material_ui_contrast = "low"
+      vim.g.gruvbox_material_float_style = "dim"
+
+      vim.g.gruvbox_material_enable_bold = 1
+      vim.g.gruvbox_material_enable_italic = 1
+      vim.g.gruvbox_material_better_performance = 1
+
+      -- Enhanced LSP and diagnostic support
+      vim.g.gruvbox_material_diagnostic_text_highlight = 1
+      vim.g.gruvbox_material_diagnostic_line_highlight = 1
+      vim.g.gruvbox_material_diagnostic_virtual_text = "colored"
+
+      -- Transparency support (like your current setup)
+      vim.g.gruvbox_material_transparent_background = 2
+
+      -- Better terminal colors and UI elements
+      vim.g.gruvbox_material_statusline_style = "material"
+      vim.g.gruvbox_material_current_word = "grey background"
 
       -- Set colorscheme
-      vim.cmd("colorscheme gruvbox")
-
-      -- Optional: Set background to dark or light
-      vim.o.background = "dark" -- or "light"
+      vim.cmd.colorscheme("gruvbox-material")
+      vim.o.background = "dark"
     end,
   },
 }
