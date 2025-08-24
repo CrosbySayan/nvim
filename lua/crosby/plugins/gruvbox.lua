@@ -6,8 +6,8 @@ return {
     lazy = false,
     config = function()
       -- Configure gruvbox-material settings
-      vim.g.gruvbox_material_foreground = "mix" -- "material", "mix", "original"
-      vim.g.gruvbox_material_style = "hard"     -- "hard", "medium", "soft"
+      vim.g.gruvbox_material_foreground = "original" -- "material", "mix", "original"
+      vim.g.gruvbox_material_style = "hard"          -- "hard", "medium", "soft"
       vim.g.gruvbox_material_background = "dark"
       vim.g.gruvbox_material_ui_contrast = "low"
       vim.g.gruvbox_material_float_style = "dim"
